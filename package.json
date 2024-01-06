@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pub": "git add . && git commit -m \"Updates\" && npm version patch && git push origin main"
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && git push origin main",
+    "watch": "while true; do npm run pub; sleep 60; done"
   },
   "repository": {
     "type": "git",
