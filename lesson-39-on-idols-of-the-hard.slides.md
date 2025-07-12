@@ -4,7 +4,7 @@ theme: uncover
 paginate: true
 style: |
   section {
-    font-size: 3.5em;
+    font-size: 2.5em;
   }
 ---
 
