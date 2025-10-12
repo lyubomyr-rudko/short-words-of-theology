@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-42-on-thankfullness.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+
+	background-color: black;
+	color: white;
+
+	font-size: 3em;
+    line-height: 2;
+    text-align: center;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%D0%BF%D1%80%D0%BE-%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C">Про вдячність.</h1>
+<p>¹ Дякуйте Господу, добрий бо Він, бо навіки Його милосердя!
+² Дякуйте Богу богів, бо навіки Його милосердя! ³ Дякуйте Владиці владик, бо навіки Його милосердя! ⁴ Тому, хто чуда великі Єдиний вчиняє, бо навіки Його милосердя! ⁵ Хто розумом небо вчинив, бо навіки Його милосердя! ⁶ Хто землю простяг над водою, бо навіки Його милосердя! ⁷ Хто світила великі вчинив, бо навіки Його милосердя! ⁸ сонце, щоб вдень панувало воно, бо навіки Його милосердя! ⁹ місяця й зорі, щоб вони панували вночі, бо навіки Його милосердя! ¹⁰ Хто Єгипет побив був у їхніх перворідних, бо навіки Його милосердя!
+¹¹ і ізраїля вивів з-між них, бо навіки Його милосердя! ¹² рукою міцною й раменом простягненим, бо навіки Його милосердя! ¹³ Хто море Червоне розтяв на частини, бо навіки Його милосердя! ¹⁴ і серед нього ізраїля перепровадив, бо навіки Його милосердя! ¹⁵ і фараона та війська його вкинув у море Червоне, бо навіки Його милосердя! ¹⁶ Хто провадив народ Свій в пустині, бо навіки Його милосердя! ¹⁷ Хто великих царів повбивав, бо навіки Його милосердя! ¹⁸ і потужних царів перебив, бо навіки Його милосердя! ¹⁹ Сигона, царя амореян, бо навіки Його милосердя! ²⁰ і Оґа, Башану царя, бо навіки Його милосердя! ²¹ і Хто землю їхню дав на спадщину, бо навіки Його милосердя! ²² на спадок ізраїлеві, Своєму рабові, бо навіки Його милосердя! ²³ Хто про нас пам'ятав у пониженні нашім, бо навіки Його милосердя!
+²⁴ і від ворогів наших визволив нас, бо навіки Його милосердя! ²⁵ Хто кожному тілові хліба дає, бо навіки Його милосердя! ²⁶ Дякуйте Богу небесному, бо навіки Його милосердя!
+Псалом 136(135)</p>
+<ol>
+<li>Що таке вдячність?</li>
+<li>Чому важлива вдячність?</li>
+<li>Три практики вдячності.</li>
+</ol>
+<h1 id="%D1%89%D0%BE-%D1%82%D0%B0%D0%BA%D0%B5-%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C">Що таке вдячність?</h1>
+<p>Вдячність — це</p>
+<ol>
+<li>
+<p>Визнання цінності і отримання задоволення від щойно отриманого подарунку. <strong>Приповісті 21:14</strong> Таємний дару́нок пога́шує гнів, а нея́вний гости́нець — лють сильну. Приклад Дадлі Дурслі. Ми не такі як Дадлі</p>
+</li>
+<li>
+<p>Визнання цінності того що ти отримав раніше і не цінував. Поки не втратив. Приклад блудного сина, який повернувся до батька і почав цінувати те що має. <strong>Луки 15:11-32</strong>. Життя, Сонце, Небео, Здоровля, сім’я, дах над головою, їжа, друзі, робота, можливість працювати і вчитися.</p>
+</li>
+<li>
+<p>Усвідомлення Бога який є джерелом всього доброго що ми маємо і - важливо - відповідь словами подяки і хвали, емоціями радості і щастя, діями доброти і служіння.</p>
+</li>
+</ol>
+<p>Вдячність - це те, що робить нас щасливими за те що ми маємо. Коли ми відчуваємо вдячність, ми починаємо цінувати те, що маємо, і це приносить нам радість.</p>
+<h1 id="%D1%87%D0%BE%D0%BC%D1%83-%D0%B2%D0%B0%D0%B6%D0%BB%D0%B8%D0%B2%D0%B0-%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C">Чому важлива вдячність?</h1>
+<p>Щоб зрозуміти чому важлива вдячність, давайте подивимося на те, що є протилежним вдячності.</p>
+<p>Протилежне вдячності - це невдоволення і нарікання, захланність і заздрість.</p>
+<ol>
+<li>
+<p>Приклад невдоволення і невдячності - євреї в пустелі, і Бог є захистом для них від спеки вдень і від холоду вночі, і дає їм манну з неба, і воду з каменю, але вони незадоволені тим що мають, і нарікають на Мойсея і Бога, і хочуть повернутися назад в Єгипет.</p>
+<p><strong>Вихід 16:2-3</strong>
+²І стала ремствувати вся громада Ізраїлевих синів на Мойсея та на Аарона в пустині. ³ І говорили їм Ізраїлеві сини: Коли б ми були повмирали від Господньої руки в єгипетськім краї, як ми сиділи над горшком м'яса, як ми їли хліба досить! Бо ви вивели нас до цієї пустині, щоб поморити голодом увесь цей збір... Вихід 16:2-3</p>
+<p>І ця невдячність спотворює їх сприйняття реальності - вони починають ідеалізувати минуле, вони згадують  - ми в єгипті їли м'ясо, огірки, часник, цибулю - і забувають про те, що в єгипті вони були рабами, і що їх діти були вбиті первістками, і що вони повинні постійно працювати на фараона.</p>
+</li>
+</ol>
+<p>Життя невдячної людини повне шкодуванням за минулим і страхом перед майбутнім.</p>
+<ol start="2">
+<li>Приклад захланності і заздрості - Гаман <strong>Естер 3:1-6</strong>. <strong>Естер 5:14</strong></li>
+</ol>
+<p>Гаман не радіє нічому поки є Мардохей, який не вклоняється йому як богові. Відсутність одої речі псує всі подарунки, і вони стають неприємними.</p>
+<ol start="3">
+<li>Хто має тому дастся, а хто не має, у того відніметься і те, що має. <strong>Матвія 13:12</strong> Здається що тут є два типи людей - одні мають, а другі не мають, але насправді мають і ті і ті, просто одні цінують те що мають, а інші ні. І тому ті хто цінує те що має, отримує ще більше, а ті хто не цінує те що має, втрачає навіть те що має.</li>
+</ol>
+<h1 id="%D1%82%D1%80%D0%B8-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8-%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%96">Три практики вдячності:</h1>
+<h2 id="%D1%80%D0%BE%D0%B7%D0%BF%D0%BE%D1%87%D0%B8%D0%BD%D0%B0%D0%BD%D0%BD%D1%8F-%D0%BA%D0%BE%D0%B6%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B4%D0%BD%D1%8F-%D0%B7-%D0%BC%D0%BE%D0%BB%D0%B8%D1%82%D0%B2%D0%B8-%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%96">Розпочинання кожного дня з молитви вдячності.</h2>
+<p>Згадайте три речі, за які ви вдячні. Це може бути що завгодно - від маленьких радощів до великих досягнень. Дякуйте Богові за ще один день життя, за здоров'я, дах над головою, за сім'ю, за друзів, за можливість працювати, вчитися і розвиватися.</p>
+<p>Правило для євреїв - ставати з правої ноги і говорити &quot;Благословенний Ти, Господи, Бог наш, Цар світу, який повертає душу мою в тіло моє&quot;.</p>
+<h2 id="%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C-%D0%B7%D0%B0-%D1%97%D0%B6%D1%83">Вдячність за їжу.</h2>
+<p>Перед кожним прийомом їжі зупиніться на мить і подумайте про те, скільки зусиль було докладено, щоб ця їжа опинилася на вашому столі. Подякуйте Богу за цю їжу і за можливість насолоджуватися нею.</p>
+<p>Євхаристія - це молитва вдячності за їжу, яку Ісус вчинив під час Тайної вечері. Але це слово &quot;євхаристія&quot; походить від грецького слова &quot;ευχαριστία&quot;, що означає &quot;подяка&quot;. 1 Тимофію 4:4-5 говорить: &quot;Бо все, що Бог створив, добре, і нічого не слід відкидати, якщо приймається з вдячністю, бо освячується словом Божим і молитвою&quot;.</p>
+<p>Якщо ми молиомся молитвою подяки то наша їжа освячується і стає малою євхаристією.</p>
+<h2 id="%D0%B2%D0%B8%D1%81%D0%BB%D0%BE%D0%B2%D0%BB%D1%8E%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F-%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%96-%D1%96%D0%BD%D1%88%D0%B8%D0%BC">Висловлювання вдячності іншим.</h2>
+<p>Не забувайте дякувати людям у вашому житті - родині, друзям, колегам. Скажіть їм, як ви цінуєте їхню підтримку і любов. Тому що все добре, що ми маємо проходить від Бога через інших людей.</p>
+<p>Тобто коли ми дякуємо іншим, ще нагода насправді дякувати Богові за те, що Він, його милість відображається через цих людей, і що Його любов діє через них.</p>
+<h2 id="%D0%BF%D1%96%D1%81%D1%82-%D1%96-%D0%B2%D0%B4%D1%8F%D1%87%D0%BD%D1%96%D1%81%D1%82%D1%8C">Піст і вдячність.</h2>
+<p>Піст - це ще одна практика, яка допомагає нам розвивати вдячність. Коли ми відмовляємося від їжі або інших задоволень, ми починаємо цінувати те, що маємо, і розуміємо, наскільки ми залежимо від Бога і Його благословень.</p>
+<h1 id="%D0%B2%D0%B8%D1%81%D0%BD%D0%BE%D0%B2%D0%BE%D0%BA">Висновок.</h1>
+<p>Вдячність - це не просто гарна манера, це спосіб життя, який допомагає нам зосередитися на позитивному, цінувати те, що маємо, і розвивати глибокі стосунки з Богом і людьми навколо нас. Коли ми практикуємо вдячність, ми відкриваємо свої серця для Божих благословень і стаємо джерелом благословення для інших.</p>
+
+</body>
+</html>
