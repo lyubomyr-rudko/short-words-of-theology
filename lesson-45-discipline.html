@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>lesson-45-discipline.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%D1%83%D1%80%D0%BE%D0%BA-45-%D0%B4%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D1%96%D0%BD%D0%B0">Урок 45: Дисципліна</h1>
+<pre><code>⁷ Бо не дав нам Бог духа страху, але сили, і любови, і здорового розуму. 2 Тимофію 1:7
+</code></pre>
+<h2 id="1-%D1%89%D0%BE-%D1%82%D0%B0%D0%BA%D0%B5-%D0%B4%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D1%96%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE-%D1%8F%D0%BA%D1%83-%D0%B9%D0%B4%D0%B5%D1%82%D1%8C%D1%81%D1%8F">1. Що таке дисципліна про яку йдеться?</h2>
+<pre><code>Дисципліна - це здатність контролювати свої дії, емоції та думки для досягнення певних цілей. Її видно у тому що людина здатна виконувати обов'язки та долати труднощі на шляху до успіху. Дисципліна - синонім до внутрішньої силил і самоконтролю.
+</code></pre>
+<blockquote></blockquote>
+<pre><code>Дисципліна - це здатність людини робити те що вона знає вона повинна робити, і побороти внутрішні перешкоди, недоліки характеру, лінь, відкладання на потім, відволікання, бажання миттєвого задоволення, щоб виокнувати те що Бог хоче від неї.
+</code></pre>
+<ul>
+<li>
+<p>тобто є два образи християнства</p>
+<ul>
+<li>одне це Римлянам 7:24 ²⁴О нещасна я людина! хто мене визволить від тіла цього смерті?
+<ul>
+<li>це образ людини яка постійно бореться зі своїми гріхами, слабкостями, недоліками, і не може їх подолати.</li>
+</ul>
+</li>
+<li>інший образ це 2 Тимофію 1:7 ⁷Бо не дав нам Бог духа страху, але сили, і любови, і здорового розуму.
+<ul>
+<li>це образ людини яка має силу, любов і здоровий розум, контроль над собою</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Перший образ - християнство це вчення яке говорить але його не виконуєш. Ти знаєш що потрібно робити - але не робиш.</p>
+</li>
+</ul>
+<h2 id="2-%D1%87%D0%BE%D0%BC%D1%83-%D0%B4%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D1%96%D0%BD%D0%B0-%D0%B2%D0%B0%D0%B6%D0%BB%D0%B8%D0%B2%D0%B0">2. Чому дисципліна важлива?</h2>
+<pre><code>    - чому так мало є людей які справді змінені на образ Христовий, які є справжніми християнами?
+
+    Серед християн у первісній Церкві побутувало звичне висловлювання: «Душа й тіло творять людину; дух і дисципліна творять християнина», — що означає: ніхто не може бути справжнім християнином без допомоги християнської дисципліни. Але якщо це так, то чи дивно, що ми бачимо так мало християн? Де християнська дисципліна? Адже, які б не проповідували вчення, без дисципліни воно не може мати повного ефекту на слухачів.
+
+    Щодня:
+        – ранок: молитва, Писання
+        – протягом дня: праця, короткі молитви
+        – вечір: підсумок дня (екзамен совісті), молитва
+    Щотижня:
+        – відвідування богослужіння і Вечері Господньої
+        – участь у групі
+        – піст/утримання (зазвичай 1–2 рази на тиждень)
+</code></pre>
+<ul>
+<li>
+<p>Дисципліна допомагає досягати цілей вчення. Дисципліна допомагає людині розрізняти бажання та цілі, дозволяючи їй приймати рішення, які сприяють довгостроковому благополуччю.</p>
+<blockquote>
+<p>Приклад - Ісав і Яків. Ісав продав своє первородство за миску їжі, бо був голодний і не міг стримати свого бажання. Дисципліна це здатність відмовитися від миттєвих задоволень заради більших цілей.</p>
+</blockquote>
+</li>
+<li>
+<p>Дисципліна будує характер: те які ми маємо звички сьогодні - а всі ми маємо звички - зазвичай визначає хто ми є. Замкнутий цикл - погані звички ведуть до поганих результатів, які підтримують погані звички. Зміна звичок починається зі змушування себе робити щось інше, поки це не стане новою звичкою.</p>
+<blockquote>
+<p>Приклад - ранкова молитва вдячності. Спочатку це може бути складно, але з часом це стає звичкою, яка формує позитивний настрій на весь день. Проста молитва 10 хвилин щоранку обов'язково змінить твоє життя. Починай свій день з вячності - станеш вдячним і щасливим. Починай з новин, телеграму, соцмереж - станеш тривожним і незадоволеним.</p>
+</blockquote>
+<blockquote>
+<p>Є простіша річ - читати певну конкретну молитву щоранку.</p>
+</blockquote>
+<p>Молитва Завіту Веслі
+Я вже не належу собі, але Тобі,
+Постав мене туди, куди хочеш, і з ким хочеш,
+Залучи мене до праці, дай мені страждання,
+Дай мені бути задіяним для Тебе
+або відстороненим для Тебе,
+Дай мені бути наповненим, дай мені бути спустошеним,
+Дай мені мати все, дай мені не мати нічого,
+Я вільно і щиро віддаю все для Твоєї Волі і Твого розпорядження.
+І тепер, о славний і благословенних Боже, Ти мій, а я Твій. Так і буде. І завіт який я уклав на землі, нехай буде укладений на небесах. Амінь.</p>
+<blockquote>
+<p>Інший приклад - слухання щоранку духовних проповідей або читання Біблії. Це допомагає налаштувати розум на позитивний і духовний лад.</p>
+</blockquote>
+<blockquote>
+<p>Інший приклад - почни свій день з застиляння ліжка. Це проста дія, яка встановлює тон для організованого і продуктивного дня.</p>
+</blockquote>
+<blockquote>
+<p>Ще один приклад - регулярний піст. Ми говорили про піст також раніше. Піст допомагає розвивати самоконтроль і дисципліну, оскільки вимагає відмови від фізичних потреб заради духовного зростання. І піст може бути відмовою від їжі - це Біблійний піст, але також піст від соцмереж, від телевізора, від певних звичок. Звільніть час - у нас бракує часу на молитву, на читання Біблії, на сім'ю, на відпочинок. Ми витрачаємо час на речі які не приносять користі.</p>
+</blockquote>
+<blockquote>
+<p>Ще один приклад - регулярні фізичні вправи. Вони не лише покращують фізичне здоров'я, але й розвивають дисципліну через регулярність і зобов'язання.</p>
+</blockquote>
+<blockquote>
+<p>Ще одна звичка - постійне навчання. Відділяти час щодна, годину на читання або вивчення Писання та духовних книжок.</p>
+</blockquote>
+<blockquote>
+<p>Роздуми та обговорення писання з іншими - онлайн. Вайбер.</p>
+</blockquote>
+<blockquote>
+<p>Джон Веслі в одній з проповідей говорить про те що він має практику і рекомендує вставати рано вранці, в 4 годині.</p>
+</blockquote>
+<blockquote>
+<p>Інша порада Джона Веслі - регулярні відвідини хворих, ув’язнених, бідних.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="3-%D1%8F%D0%BA-%D1%80%D0%BE%D0%B7%D0%B2%D0%B8%D0%B2%D0%B0%D1%82%D0%B8-%D0%B4%D0%B8%D1%81%D1%86%D0%B8%D0%BF%D0%BB%D1%96%D0%BD%D1%83-%D1%83-%D1%81%D0%B2%D0%BE%D1%94%D0%BC%D1%83-%D0%B6%D0%B8%D1%82%D1%82%D1%96">3. Як розвивати дисципліну у своєму житті?</h2>
+<ul>
+<li>додавай до свого розпорядку дня нові звички по одній. Щоденна рутина допомагає створити структуру і порядок у житті. Тобі не доведеться думати і змушувати себе що робити далі - все буде за розкладом.</li>
+</ul>
+
+</body>
+</html>
