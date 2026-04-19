@@ -1,0 +1,24 @@
+body {
+  font-size: 36px;
+}
+
+p,
+li {
+  font-size: 36px;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 64px;
+}
+h2 {
+  font-size: 52px;
+}
+h3 {
+  font-size: 44px;
+}
+
+code,
+pre {
+  font-size: 32px;
+}
